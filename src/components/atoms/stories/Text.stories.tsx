@@ -74,7 +74,7 @@ export const Primary: Story = {
 };
 export const Hero: Story = {
   args: {
-    typography: 'h1',
+    typography: 'hero',
   },
 };
 export const H1: Story = {

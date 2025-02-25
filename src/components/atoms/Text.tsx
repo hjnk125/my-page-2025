@@ -41,15 +41,15 @@ export const FONT_THEME = {
   },
   regular: {
     default: { fontSize: '16px', lineHeight: 1.5 },
-    mobile: { fontSize: '14px', lineHeight: 1.5 },
+    mobile: { fontSize: '15px', lineHeight: 1.5 },
   },
   small: {
     default: { fontSize: '14px', lineHeight: 1.5 },
-    mobile: { fontSize: '12px', lineHeight: 1.5 },
+    mobile: { fontSize: '14px', lineHeight: 1.5 },
   },
   tiny: {
     default: { fontSize: '12px', lineHeight: 1.5 },
-    mobile: { fontSize: '10px', lineHeight: 1.5 },
+    mobile: { fontSize: '12px', lineHeight: 1.5 },
   },
 };
 

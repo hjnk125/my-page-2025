@@ -9,7 +9,7 @@ const meta: Meta<typeof Cursor> = {
     docs: {
       description: {
         component:
-          '`Cursor` 컴포넌트는 마우스 커서를 따라가는 애니메이션을 표시합니다.',
+          '`Cursor` 컴포넌트는 마우스 커서를 따라가는 애니메이션을 표시합니다. (PC 환경에서만 표시됩니다.)',
       },
       inline: true,
       story: {

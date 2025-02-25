@@ -1,4 +1,4 @@
-import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 
 <Meta title="Introduction" />
 
@@ -20,21 +20,25 @@ index.css에 breakpoints, 폰트, 색상, 그리고 Tailwind CSS 기반 유틸�
   <ColorItem
     title="Background"
     subtitle=""
-    colors={{ '--color-background': '#f4f4f4', '--color-dark-background': '#212121' }}
+    colors={{
+      'background': '#f4f4f4',
+      'dark-background': '#212121',
+    }}
   />
   <ColorItem
     title="Grayscale"
     subtitle=""
-    colors={{ '--color-white': '#ffffff', '--color-gray': '#aaaaaa', '--color-dark-gray': '#111111', '--color-black': '#000000' }}
+    colors={{
+      'light-gray': '#d1d1d1',
+      'gray': '#aaaaaa',
+      'dark-gray': '#111111',
+    }}
   />
-  <ColorItem
-    title="Primary"
-    subtitle=""
-    colors={{ '--color-primary': '#f7f168' }}
-  />
+  <ColorItem title="Primary" subtitle="" colors={{ primary: '#f7f168' }} />
 </ColorPalette>
 
 ### Breakpoints
+
 ```
 --breakpoint-md: 768px;
 --breakpoint-lg: 1024px;
@@ -42,6 +46,7 @@ index.css에 breakpoints, 폰트, 색상, 그리고 Tailwind CSS 기반 유틸�
 ```
 
 ### Fonts
+
 ```
 --font-roboto: 'Roboto', sans-serif;
 --font-pretendard: 'Pretendard', sans-serif;
@@ -52,6 +57,7 @@ index.css에 breakpoints, 폰트, 색상, 그리고 Tailwind CSS 기반 유틸�
 
 - **theme-background-color**<br/>
   테마 별 배경 색상을 지정합니다.
+
   ```css
   .theme-background-color {
     @apply bg-background dark:bg-dark-background;
@@ -60,6 +66,7 @@ index.css에 breakpoints, 폰트, 색상, 그리고 Tailwind CSS 기반 유틸�
 
 - **theme-text-color**<br/>
   테마 별 글자 색상을 지정합니다.
+
   ```css
   .theme-text-color {
     @apply text-black dark:text-white;
@@ -68,6 +75,7 @@ index.css에 breakpoints, 폰트, 색상, 그리고 Tailwind CSS 기반 유틸�
 
 - **transition-default-all**<br/>
   동일한 duration 값을 사용하기 위한 클래스입니다.
+
   ```css
   .transition-default-all {
     @apply transition-all duration-300 ease-in-out;
@@ -76,6 +84,7 @@ index.css에 breakpoints, 폰트, 색상, 그리고 Tailwind CSS 기반 유틸�
 
 - **bento**<br/>
   bento grid의 아이템에 동일한 border-radius 값을 사용하기 위한 클래스입니다.
+
   ```css
   .bento {
     @apply rounded-[24px];
