@@ -1,8 +1,11 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import useActiveCursor from '@/hooks/useActiveCursor';
+import { useMediaQuery } from 'react-responsive';
+import { getLgBreakpoint } from '@/constants/breackpoints.ts';
 
 const Cursor = () => {
+  const isMobile = useMediaQuery({ maxWidth: getLgBreakpoint() - 1 });
   const { isActive } = useActiveCursor();
 
   const mouse = useRef({ x: 0, y: 0 });
@@ -55,6 +58,9 @@ const Cursor = () => {
     };
   }, []);
 
+  if (isMobile) {
+    return null;
+  }
   return (
     <div
       ref={circle}

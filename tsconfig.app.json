@@ -24,11 +24,11 @@
 
     /* Alias */
     "paths": {
-      "@/*": ["src/*"],
-      "@icons/*": ["src/assets/icons/*"],
-      "@images/*": ["src/assets/images/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@/*": ["./src/*"],
+      "@icons/*": ["./src/assets/icons/*"],
+      "@images/*": ["./src/assets/images/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"]
     }
   },
   "include": ["src"]

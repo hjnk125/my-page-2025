@@ -4,7 +4,6 @@ import firstBg from '@images/first-banner-bg.png';
 import pawdly from '@images/pawdly-banner.png';
 import { useMediaQuery } from 'react-responsive';
 import { getLgBreakpoint } from '@/constants/breackpoints.ts';
-import useActiveCursor from '@/hooks/useActiveCursor';
 
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
@@ -20,6 +19,7 @@ const FirstBanner = () => {
             <img
               className="h-full object-cover"
               src="/assets/photogray-spline-thumbnail.png"
+              alt="photogray"
             />
           </div>
         }
@@ -35,6 +35,7 @@ const FirstBanner = () => {
             <img
               className="h-full object-cover"
               src="/assets/photogray-spline-thumbnail.png"
+              alt="photogray"
             />
           </div>
         }
@@ -57,6 +58,7 @@ const SecondBanner = () => {
             <img
               className="h-full object-cover"
               src="/assets/ocup-spline-thumbnail.png"
+              alt="ocup"
             />
           </div>
         }

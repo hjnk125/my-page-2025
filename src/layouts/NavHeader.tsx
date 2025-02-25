@@ -24,14 +24,22 @@ const NavHeader = () => {
         <div {...actions} className="flex items-center gap-[24px]">
           <ThemeToggle />
           <button
-            className="bg-dark-background dark:bg-background flex items-center gap-[8px] px-[16px] py-[12px] text-white dark:text-black"
+            className="bg-dark-background flex items-center gap-[8px] px-[10px] py-[8px] text-white lg:px-[16px] lg:py-[12px] dark:bg-white dark:text-black"
             onClick={handleClickLink}
           >
-            <StorybookIcon width="24" height="24" />
+            <StorybookIcon
+              width="24"
+              height="24"
+              className="h-[16px] w-[16px] lg:h-[24px] lg:w-[24px]"
+            />
             <Text typography="regular" className="hidden lg:block">
               Storybook
             </Text>
-            <LinkIcon width="24" height="24" />
+            <LinkIcon
+              width="24"
+              height="24"
+              className="h-[16px] w-[16px] lg:h-[24px] lg:w-[24px]"
+            />
           </button>
         </div>
       </div>
