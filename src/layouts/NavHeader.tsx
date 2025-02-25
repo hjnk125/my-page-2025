@@ -9,7 +9,10 @@ const NavHeader = () => {
   const { actions } = useActiveCursor();
 
   const handleClickLink = () => {
-    window.open(`${window.location.origin}/storybook/index.html`, '_blank');
+    window.open(
+      `${window.location.origin}/storybook/index.html?path=/docs/introduction--documentation`,
+      '_blank',
+    );
   };
 
   return (
