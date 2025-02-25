@@ -4,42 +4,41 @@ import firstBg from '@images/first-banner-bg.png';
 import pawdly from '@images/pawdly-banner.png';
 import { useMediaQuery } from 'react-responsive';
 import { getLgBreakpoint } from '@/constants/breackpoints.ts';
+import Text from '@components/atoms/Text.tsx';
 
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const FirstBanner = () => {
+  const FallbackImage = () => {
+    return (
+      <div className="absolute-position-center h-full w-full">
+        <img
+          className="h-full object-cover"
+          src="/assets/photogray-spline-thumbnail.png"
+          alt="photogray"
+        />
+      </div>
+    );
+  };
+
   return (
     <ProjectBanner
       bgImage={firstBg}
       className="group h-[calc(100vh-72px)] pb-[72px]"
     >
-      <Suspense
-        fallback={
-          <div className="absolute-position-center h-full w-full">
-            <img
-              className="h-full object-cover"
-              src="/assets/photogray-spline-thumbnail.png"
-              alt="photogray"
-            />
-          </div>
-        }
+      <Text
+        as="p"
+        className="text-light-gray absolute top-[24px] left-1/2 z-100 -translate-x-1/2 animate-bounce group-hover:hidden"
       >
+        Hover me! ▼
+      </Text>
+      <Suspense fallback={<FallbackImage />}>
         <Spline
           scene="/assets/photogray_move.splinecode"
           className="absolute-position-center h-full w-full group-hover:hidden"
         />
       </Suspense>
-      <Suspense
-        fallback={
-          <div className="absolute-position-center h-full w-full">
-            <img
-              className="h-full object-cover"
-              src="/assets/photogray-spline-thumbnail.png"
-              alt="photogray"
-            />
-          </div>
-        }
-      >
+      <Suspense fallback={<FallbackImage />}>
         <Spline
           scene="/assets/photogray_look.splinecode"
           className="absolute-position-center hidden h-full w-full group-hover:block"
