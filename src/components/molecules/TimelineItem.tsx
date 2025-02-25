@@ -20,7 +20,7 @@ const TimelineItem = ({ logo, title, description, detailList }: Props) => {
           <Text as="h5" typography="h5" className="theme-text-color font-bold">
             {title}
           </Text>
-          <Text as="p" typography="regular" className="text-medium-gray">
+          <Text as="p" typography="regular" className="text-gray">
             {description}
           </Text>
         </div>
